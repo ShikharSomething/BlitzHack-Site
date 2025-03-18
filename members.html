@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blitzhack Members</title>
+    <link rel="stylesheet" href="member_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <div class="grid-pattern"></div>
+    <header>
+        <img src="Blitzhack_logo.png" alt="Blitzhack Logo" class="logo">
+        <h1>Blitzhack Members</h1>
+    </header>
+    <main>
+        <section class="members-grid">
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/5h1kh4r.png" alt="5h1kh4r">
+                    </div>
+                    <h2 class="member-name">5h1kh4r</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Team Captain</div>
+                    <div class="member-joined">Joined <strong>September 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-forensic">
+                            <i class="fas fa-key"></i> crypto
+                        </span>
+                        <span class="specialty-tag tag-reverse">
+                            <i class="fas fa-code"></i> reverse
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/ShikharSomething" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/raviyelna.jpg" alt="raviyelna">
+                    </div>
+                    <h2 class="member-name">raviyelna</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Moderator</div>
+                    <div class="member-joined">Joined <strong>September 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-forensics">
+                            <i class="fas fa-globe"></i> forensics
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/raviyelna" target="_blank" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://hackmd.io/@Raviyelna" target="_blank" class="social-icon" title="HackMD">
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more member cards as needed -->
+        </section>
+    </main>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".member-card"), {
+            max: 8,
+            speed: 300,
+            glare: true,
+            "max-glare": 0.3,
+            scale: 1.03
+        });
+    </script>
+</body>
+</html>
