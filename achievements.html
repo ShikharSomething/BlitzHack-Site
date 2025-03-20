@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blitzhack Achievements</title>
+    <link rel="stylesheet" href="assets/css/achievements.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="particles-container" id="particles-container"></div>
+    <div id="header-container"></div>
+    <main>
+        <section class="achievements-section">
+            <h1 class="section-title">Achievements</h1>
+            
+            <div class="achievements-category highlights-category fade-in-up">
+                <h2>Highlights</h2>
+                <ul class="highlights-list">
+                    <li class="highlight-item">2nd in PragyanCTF'25</li>
+                    <li class="highlight-item">4th in ACECTF'25</li>
+                    <li class="highlight-item">5th in WatCTF'25</li>
+                </ul>
+            </div>
+            
+            <div class="achievements-category fade-in-up">
+                <h2>2025</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-item">5th in WatCTF</div>
+                    <div class="achievement-item">12th in NowruzCTF</div>
+                    <div class="achievement-item">14th in PearlCTF</div>
+                    <div class="achievement-item">13th in VishwaCTF</div>
+                    <div class="achievement-item">9th in WinjaCTF</div>
+                    <div class="achievement-item">8th in ApoorvCTF</div>
+                    <div class="achievement-item">4th in ACECTF</div>
+                    <div class="achievement-item">6th in EHAXCTF</div>
+                    <div class="achievement-item">2nd in PragyanCTF</div>
+                    <div class="achievement-item">6th in CodefestCTF</div>
+                </div>
+            </div>
+            
+            <div class="achievements-category fade-in-up">
+                <h2>2024</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-item">4th in Z3R0 D4Y CTF</div>
+                    <div class="achievement-item">10th in QuestconCTF</div>
+                    <div class="achievement-item">11th in H7CTF</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script>
+        async function includeHTML(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`Error fetching ${filePath}: ${response.statusText}`);
+                }
+                const content = await response.text();
+                document.getElementById(elementId).innerHTML = content;
+                
+                const scripts = document.getElementById(elementId).getElementsByTagName('script');
+                for (let i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerText);
+                }
+            } catch (error) {
+                console.error(`Failed to include ${filePath}:`, error);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', async function() {
+            await includeHTML('header-container', 'header.html');
+            await includeHTML('footer-container', 'footer.html');
+            
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            const highlightItems = document.querySelectorAll('.highlight-item');
+            highlightItems.forEach((item, index) => {
+                item.classList.add('stagger-in');
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            const achievementItems = document.querySelectorAll('.achievement-item');
+            achievementItems.forEach((item, index) => {
+                item.classList.add('stagger-in');
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                const xPos = (e.clientX / window.innerWidth - 0.5) * 20;
+                const yPos = (e.clientY / window.innerHeight - 0.5) * 20;
+                
+                const title = document.querySelector('.section-title');
+                title.style.transform = `translateZ(20px) rotateX(${-yPos/10}deg) rotateY(${xPos/10}deg)`;
+                
+                const categoryHeadings = document.querySelectorAll('.achievements-category h2');
+                categoryHeadings.forEach(heading => {
+                    heading.style.transform = `translateZ(15px) rotateX(${-yPos/15}deg) rotateY(${xPos/15}deg)`;
+                });
+                
+                const highlightItems = document.querySelectorAll('.highlights-list li');
+                highlightItems.forEach((item, index) => {
+                    const factor = 1 - (index * 0.03);
+                    item.style.transform = `translateZ(${15 * factor}px) rotateX(${-yPos/15 * factor}deg) rotateY(${xPos/15 * factor}deg)`;
+                });
+                
+                const achievementItems = document.querySelectorAll('.achievements-list li');
+                achievementItems.forEach((item, index) => {
+                    const factor = 1 - (index * 0.05);
+                    item.style.transform = `translateZ(${10 * factor}px) rotateX(${-yPos/20 * factor}deg) rotateY(${xPos/20 * factor}deg)`;
+                });
+            });
+            
+            createParticles();
+        });
+        
+        function createParticles() {
+            const container = document.getElementById('particles-container');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 30 + 10;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                particle.style.opacity = Math.random() * 0.3;
+                
+                const xPos = Math.random() * 100;
+                const yPos = Math.random() * 100;
+                particle.style.left = `${xPos}%`;
+                particle.style.top = `${yPos}%`;
+                
+                const animDuration = Math.random() * 20 + 10;
+                particle.style.animation = `float ${animDuration}s infinite ease-in-out`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+    </script>
+</body>
+</html>
