@@ -209,6 +209,10 @@ header h1 {
     background: linear-gradient(45deg, #10b981, #059669);
 }
 
+.tag-hardware {
+    background: linear-gradient(45deg, #facc15, #eab308); /* Yellow gradient */
+}
+
 .member-social {
     display: flex;
     justify-content: center;

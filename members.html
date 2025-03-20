@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blitzhack Members</title>
     <link rel="stylesheet" href="member_styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 </head>
 <body>
-    <div class="grid-pattern"></div>
-    <header>
-        <img src="Blitzhack_logo.png" alt="Blitzhack Logo" class="logo">
-        <h1>Blitzhack Members</h1>
-    </header>
+    <div id="header-container"></div>
     <main>
         <section class="members-grid">
             <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
@@ -35,10 +33,51 @@
                         <span class="specialty-tag tag-reverse">
                             <i class="fas fa-code"></i> reverse
                         </span>
+                        <span class="specialty-tag tag-hardware">
+                            <i class="fas fa-microchip"></i> hardware
+                        </span>
                     </div>
                     <div class="member-social">
                         <a href="https://github.com/ShikharSomething" class="social-icon">
                             <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/Inv1s1bl3.png" alt="Inv1s1bl3">
+                    </div>
+                    <h2 class="member-name">Inv1s1bl3</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Team Captain</div>
+                    <div class="member-joined">Joined <strong>September 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-pwn">
+                            <i class="fas fa-bomb"></i> pwn
+                        </span>
+                        <span class="specialty-tag tag-reverse">
+                            <i class="fas fa-code"></i> reverse
+                        </span>
+                        <span class="specialty-tag tag-forensic">
+                            <i class="fas fa-search"></i> forensics
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/1nv1sibl3/" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/inv1s1bl3.hx/" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/om-honrao-aka-invisible/" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://omhonrao.xyz/" class="social-icon">
+                            <i class="fas fa-file-alt"></i>
                         </a>
                     </div>
                 </div>
@@ -55,8 +94,11 @@
                     <div class="member-role">Moderator</div>
                     <div class="member-joined">Joined <strong>September 2024</strong></div>
                     <div class="specialty-tags">
-                        <span class="specialty-tag tag-forensics">
-                            <i class="fas fa-globe"></i> forensics
+                        <span class="specialty-tag tag-reverse">
+                            <i class="fas fa-code"></i> reverse
+                        </span>
+                        <span class="specialty-tag tag-forensic">
+                            <i class="fas fa-search"></i> forensics
                         </span>
                     </div>
                     <div class="member-social">
@@ -69,16 +111,288 @@
                     </div>
                 </div>
             </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/0x1337.png" alt="0x1337">
+                    </div>
+                    <h2 class="member-name">0x1337</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Moderator</div>
+                    <div class="member-joined">Joined <strong>November 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-reverse">
+                            <i class="fas fa-code"></i> reverse
+                        </span>
+                        <span class="specialty-tag tag-pwn">
+                            <i class="fas fa-bomb"></i> pwn
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/h4ckyou" target="_blank" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/alter.jpg" alt="Alter">
+                    </div>
+                    <h2 class="member-name">Alter</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Staff Team</div>
+                    <div class="member-joined">Joined <strong>December 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-pwn">
+                            <i class="fas fa-bomb"></i> pwn
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/5o1z" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_j1n.n__/" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://5o1z.github.io/" target="_blank" class="social-icon" title="HackMD">
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/Deit.png" alt="Deit">
+                    </div>
+                    <h2 class="member-name">Deit</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Staff Team</div>
+                    <div class="member-joined">Joined <strong>September 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-reverse">
+                            <i class="fas fa-code"></i> reverse
+                        </span>
+                        <span class="specialty-tag tag-osint">
+                            <i class="fas fa-eye"></i> osint
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://www.linkedin.com/in/tdeit/" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/shadowh.jpg" alt="Shadowh">
+                    </div>
+                    <h2 class="member-name">Shadowh</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Staff Team</div>
+                    <div class="member-joined">Joined <strong>September 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-web">
+                            <i class="fas fa-globe"></i> web
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/Shadowh2501" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/het-gohil-58373a259/" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/Zwique.png" alt="Zwique">
+                    </div>
+                    <h2 class="member-name">Zwique</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Official</div>
+                    <div class="member-joined">Joined <strong>February 2025</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-osint">
+                            <i class="fas fa-eye"></i> osint
+                        </span>
+                        <span class="specialty-tag tag-forensic">
+                            <i class="fas fa-search"></i> forensics
+                        </span>
+                        <span class="specialty-tag tag-crypto">
+                            <i class="fas fa-key"></i> crypto
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/Zwique" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://zwique.gitbook.io/zwique_notes" class="social-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/B3arnoob.webp" alt="B34RN00B">
+                    </div>
+                    <h2 class="member-name">B34RN00B</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Official</div>
+                    <div class="member-joined">Joined <strong>January 2025</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-osint">
+                            <i class="fas fa-eye"></i> osint
+                        </span>
+                        <span class="specialty-tag tag-hardware">
+                            <i class="fas fa-microchip"></i> hardware
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/k0d3-techno" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/akwildlife123/" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/Ziru.jpg" alt="Ziru">
+                    </div>
+                    <h2 class="member-name">Ziru</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Official</div>
+                    <div class="member-joined">Joined <strong>February 2025</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-web">
+                            <i class="fas fa-globe"></i> web
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/arctanziru" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/h26v.png" alt="h26v">
+                    </div>
+                    <h2 class="member-name">h26v</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Member</div>
+                    <div class="member-joined">Joined <strong>March 2025</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-forensic">
+                            <i class="fas fa-search"></i> forensics
+                        </span>
+                        <span class="specialty-tag tag-reverse">
+                            <i class="fas fa-code"></i> reverse
+                        </span>
+                    </div>
+                    <div class="member-social">
+                        <a href="https://github.com/h26v" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
+                <div class="member-profile">
+                    <div class="member-avatar">
+                        <img src="member_logo/h26v.png" alt="Vanmaxohp">
+                    </div>
+                    <h2 class="member-name">Vanmaxohp</h2>
+                </div>
+                <div class="member-info">
+                    <div class="member-role">Member</div>
+                    <div class="member-joined">Joined <strong>November 2024</strong></div>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag tag-crypto">
+                            <i class="fas fa-key"></i> crypto
+                        </span>
+                    </div>
+                    <div class="member-social">
+                    </div>
+                </div>
+            </div>
+
             <!-- Add more member cards as needed -->
         </section>
     </main>
+    <div id="footer-container"></div>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".member-card"), {
-            max: 8,
-            speed: 300,
-            glare: true,
-            "max-glare": 0.3,
-            scale: 1.03
+        async function includeHTML(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`Error fetching ${filePath}: ${response.statusText}`);
+                }
+                const content = await response.text();
+                document.getElementById(elementId).innerHTML = content;
+                
+                const scripts = document.getElementById(elementId).getElementsByTagName('script');
+                for (let i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerText);
+                }
+            } catch (error) {
+                console.error(`Failed to include ${filePath}:`, error);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', async function() {
+            await includeHTML('header-container', 'header.html');
+            await includeHTML('footer-container', 'footer.html');
+            
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            VanillaTilt.init(document.querySelectorAll(".member-card"), {
+                max: 8,
+                speed: 300,
+                glare: true,
+                "max-glare": 0.3,
+                scale: 1.03
+            });
         });
     </script>
 </body>
