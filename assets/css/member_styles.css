@@ -210,7 +210,7 @@ header h1 {
 }
 
 .tag-hardware {
-    background: linear-gradient(45deg, #facc15, #eab308); /* Yellow gradient */
+    background: linear-gradient(45deg, #facc15, #eab308); 
 }
 
 .member-social {
@@ -248,7 +248,6 @@ header h1 {
     }
 }
 
-/* Matrix-like animation for the background */
 @keyframes matrix-effect {
     0% {
         background-position: 0 0;

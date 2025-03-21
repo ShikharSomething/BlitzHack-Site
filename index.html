@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blitzhack Home</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="particles-container" id="particles"></div>
+    
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <span class="glow-text">Blitzhack</span></h1>
+                <p class="hero-subtitle">Hacking life and the future, one exploit at a time. Join our elite cybersecurity team in the digital battleground.</p>
+                <a href="members.html" class="hero-button">Meet Our Team <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-3d">
+                <div class="cube">
+                    <div class="face front">Blitzhack</div>
+                    <div class="face back">CTF</div>
+                    <div class="face left">Security</div>
+                    <div class="face right">Research</div>
+                    <div class="face top">Community</div>
+                    <div class="face bottom">Knowledge</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="terminal-section">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button button-red"></div>
+                        <div class="terminal-button button-yellow"></div>
+                        <div class="terminal-button button-green"></div>
+                    </div>
+                    <div class="terminal-title">blitzhack@secure-terminal:~</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">blitzhack@secure:~$</span>
+                        <span class="command typing" id="command1">./welcome.sh</span>
+                    </div>
+                    <div class="output" id="output1">
+                        Welcome to Blitzhack. Initializing security protocols...
+                        <br>
+                        Loading team profile... Complete
+                        <br>
+                        Loading skill database... Complete
+                        <br>
+                        Establishing secure connection... Complete
+                    </div>
+                    <div class="command-line">
+                        <span class="prompt">blitzhack@secure:~$</span>
+                        <span class="command typing" id="command2">mission.txt</span>
+                    </div>
+                    <div class="output" id="output2">
+                        Our mission is to push the boundaries of cybersecurity, compete in elite CTF competitions, and share our knowledge with the community. We explore vulnerabilities to build a safer digital world.
+                    </div>
+                    <div class="command-line">
+                        <span class="prompt">blitzhack@secure:~$</span>
+                        <span class="command typing" id="command3">./join.sh --team blitzhack</span>
+                    </div>
+                    <div class="output" id="output3">
+                        View contacts page
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p>Blitzhack is an elite cybersecurity team dedicated to participating in CTF competitions, researching security vulnerabilities, and sharing knowledge within the security community.</p>
+            </div>
+            <div class="skill-cards">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3 class="skill-title">CTF Competitions</h3>
+                    <p class="skill-desc">We participate in Capture The Flag competitions worldwide, solving complex cybersecurity challenges.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="skill-title">Community</h3>
+                    <p class="skill-desc">We foster a collaborative environment for knowledge sharing and skill development.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Get Involved</h2>
+                <p class="cta-text">Join our community and start your journey in cybersecurity today!</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button primary">Contact Us</a>
+                    <a href="achievements.html" class="cta-button secondary">View Achievements</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer-container"></div>
+    
+    <script>
+        async function includeHTML(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`Error fetching ${filePath}: ${response.statusText}`);
+                }
+                const content = await response.text();
+                document.getElementById(elementId).innerHTML = content;
+                
+                const scripts = document.getElementById(elementId).getElementsByTagName('script');
+                for (let i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerText);
+                }
+            } catch (error) {
+                console.error(`Failed to include ${filePath}:`, error);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', async function() {
+            await includeHTML('header-container', 'header.html');
+            await includeHTML('footer-container', 'footer.html');
+            
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            createParticles();
+            
+            typeWriter("command1", 100, function() {
+                setTimeout(function() {
+                    document.getElementById("output1").style.display = "block";
+                    setTimeout(function() {
+                        typeWriter("command2", 100, function() {
+                            setTimeout(function() {
+                                document.getElementById("output2").style.display = "block";
+                                setTimeout(function() {
+                                    typeWriter("command3", 100, function(){
+                                        setTimeout(function() {
+                                            document.getElementById("output3").style.display = "block";
+                                        }, 500);
+                                    });
+                                }, 1000);
+                            }, 500);
+                        });
+                    }, 1500);
+                }, 500);
+            });
+        });
+        
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 2 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                
+                particle.style.opacity = Math.random() * 0.5 + 0.2;
+                
+                const animDuration = Math.random() * 20 + 10;
+                const animDelay = Math.random() * 10;
+                particle.style.animation = `particleFloat ${animDuration}s ${animDelay}s infinite linear`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        function typeWriter(elementId, speed, callback) {
+            const element = document.getElementById(elementId);
+            const text = element.innerText;
+            element.innerText = "";
+            element.style.display = "inline-block";
+            
+            let i = 0;
+            const timer = setInterval(function() {
+                if (i < text.length) {
+                    element.innerText += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(timer);
+                    if (callback) callback();
+                }
+            }, speed);
+        }
+    </script>
+</body>
+</html>
