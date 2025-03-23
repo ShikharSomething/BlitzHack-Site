@@ -14,6 +14,10 @@
     gap: 30px;
 }
 
+.footer-social a{
+    text-decoration: none;
+}
+
 .footer-section h3 {
     color: #00ff8c;
     font-size: 1.3em;
