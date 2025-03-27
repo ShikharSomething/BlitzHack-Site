@@ -3,13 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blitzhack Home</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Blitzhack | CTF Team</title>
+    <meta name="title" content="Blitzhack | CTF Team">
+    <meta name="description" content="Blitzhack is a cybersecurity team dedicated to participating in CTF competitions, researching security vulnerabilities, and sharing knowledge within the security community. Join us in our mission to make the digital world safer.">
+    <meta name="keywords" content="Blitzhack, CTF team, cybersecurity, Capture The Flag, security research, hacking, ethical hacking, security community">
+    <meta name="author" content="Blitzhack">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blitzhack.xyz/">
+    <meta property="og:title" content="Blitzhack | CTF Team">
+    <meta property="og:description" content="Blitzhack is a cybersecurity team dedicated to participating in CTF competitions, researching security vulnerabilities, and sharing knowledge within the security community. Join us in our mission to make the digital world safer.">
+    <meta property="og:image" content="https://blitzhack.xyz/assets/images/Blitzhack_logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blitzhack.xyz/">
+    <meta property="twitter:title" content="Blitzhack | CTF Team">
+    <meta property="twitter:description" content="Blitzhack is a cybersecurity team dedicated to participating in CTF competitions, researching security vulnerabilities, and sharing knowledge within the security community. Join us in our mission to make the digital world safer.">
+    <meta property="twitter:image" content="https://blitzhack.xyz/assets/images/Blitzhack_logo.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#0a0f18">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://blitzhack.xyz/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
+    <style>
+        .terminal-link {
+            color: #00ff00;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .terminal-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div id="header-container"></div>
@@ -46,7 +90,7 @@
                 </div>
                 <div class="terminal-body">
                     <div class="command-line">
-                        <span class="prompt">blitzhack@secure:~$</span>
+                        <span class="prompt">blitzhack@secure:~$ </span>
                         <span class="command typing" id="command1">./welcome.sh</span>
                     </div>
                     <div class="output" id="output1">
@@ -59,18 +103,18 @@
                         Establishing secure connection... Complete
                     </div>
                     <div class="command-line">
-                        <span class="prompt">blitzhack@secure:~$</span>
-                        <span class="command typing" id="command2">mission.txt</span>
+                        <span class="prompt">blitzhack@secure:~$ </span>
+                        <span class="command typing" id="command2">cat&nbsp;mission.txt</span>
                     </div>
                     <div class="output" id="output2">
                         Our mission is to push the boundaries of cybersecurity, compete in elite CTF competitions, and share our knowledge with the community. We explore vulnerabilities to build a safer digital world.
                     </div>
                     <div class="command-line">
-                        <span class="prompt">blitzhack@secure:~$</span>
-                        <span class="command typing" id="command3">./join.sh --team blitzhack</span>
+                        <span class="prompt">blitzhack@secure:~$ </span>
+                        <span class="command typing" id="command3">./join.sh&nbsp;--team&nbsp;blitzhack</span>
                     </div>
                     <div class="output" id="output3">
-                        View contacts page
+                        <a href="contact.html" class="terminal-link">View contacts page</a>
                     </div>
                 </div>
             </div>
