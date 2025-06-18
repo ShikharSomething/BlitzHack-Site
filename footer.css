@@ -75,6 +75,7 @@
     justify-content: center;
     transition: all 0.3s ease;
     color: #fff;
+    text-decoration: none;
 }
 
 .footer-social a:hover {
