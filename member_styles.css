@@ -213,7 +213,11 @@ header h1 {
 }
 
 .tag-hardware {
-    background: linear-gradient(45deg, #facc15, #eab308); /* Yellow gradient */
+    background: linear-gradient(45deg, #facc15, #eab308);
+}
+
+.tag-cloud {
+    background: linear-gradient(45deg, #3b82f6, #2563eb); 
 }
 
 .member-social {
