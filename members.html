@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Team Members - Blitzhack | CTF Team</title>
     <meta name="title" content="Team Members - Blitzhack | CTF Team">
     <meta name="description" content="Meet the talented members of Blitzhack CTF team. Our diverse team of cybersecurity experts specializes in various fields including reverse engineering, web security, cryptography, and more.">
     <meta name="keywords" content="Blitzhack members, CTF team members, cybersecurity experts, reverse engineering, web security, cryptography, security researchers">
     <meta name="author" content="Blitzhack">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://blitzhack.xyz/members.html">
     <meta property="og:title" content="Team Members - Blitzhack | CTF Team">
     <meta property="og:description" content="Meet the talented members of Blitzhack CTF team. Our diverse team of cybersecurity experts specializes in various fields including reverse engineering, web security, cryptography, and more.">
     <meta property="og:image" content="https://blitzhack.xyz/assets/images/Blitzhack_logo.png">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://blitzhack.xyz/members.html">
     <meta property="twitter:title" content="Team Members - Blitzhack | CTF Team">
     <meta property="twitter:description" content="Meet the talented members of Blitzhack CTF team. Our diverse team of cybersecurity experts specializes in various fields including reverse engineering, web security, cryptography, and more.">
     <meta property="twitter:image" content="https://blitzhack.xyz/assets/images/Blitzhack_logo.png">
-    
+
     <!-- Additional SEO Meta Tags -->
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="theme-color" content="#0a0f18">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://blitzhack.xyz/members.html">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
+
     <link rel="stylesheet" href="assets/css/member_styles.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
                 <div class="member-profile">
                     <div class="member-avatar">
@@ -193,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
                 <div class="member-profile">
                     <div class="member-avatar">
@@ -271,7 +271,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="member-card" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-scale="1.05">
                 <div class="member-profile">
                     <div class="member-avatar">
@@ -349,7 +349,7 @@
                         </span>
                         <span class="specialty-tag tag-misc">
                             <i class="fas fa-puzzle-piece"></i> misc
-                        </span>                        
+                        </span>
                     </div>
                     <div class="member-social">
                         <a href="https://github.com/rahisec" class="social-icon">
@@ -378,7 +378,7 @@
                     <div class="specialty-tags">
                         <span class="specialty-tag tag-web">
                             <i class="fas fa-globe"></i> web
-                        </span>                    
+                        </span>
                     </div>
                     <div class="member-social">
                         <a href="https://noob-ymuu.site/" class="social-icon">
@@ -782,6 +782,12 @@
                         <a href="https://github.com/noinoiexists" class="social-icon">
                             <i class="fab fa-github"></i>
                         </a>
+                        <a href="https://www.linkedin.com/in/nithik-r-369948179/" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://recu.blog/" class="social-icon" title="Blog">
+                            <i class="fas fa-file-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -857,7 +863,7 @@
                 }
                 const content = await response.text();
                 document.getElementById(elementId).innerHTML = content;
-                
+
                 const scripts = document.getElementById(elementId).getElementsByTagName('script');
                 for (let i = 0; i < scripts.length; i++) {
                     eval(scripts[i].innerText);
@@ -866,21 +872,21 @@
                 console.error(`Failed to include ${filePath}:`, error);
             }
         }
-        
+
         document.addEventListener('DOMContentLoaded', async function() {
             await includeHTML('header-container', 'header.html');
             await includeHTML('footer-container', 'footer.html');
-            
+
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             navLinks.forEach(link => {
                 const linkPage = link.getAttribute('href');
                 if (linkPage === currentPage) {
                     link.classList.add('active');
                 }
             });
-            
+
             VanillaTilt.init(document.querySelectorAll(".member-card"), {
                 max: 8,
                 speed: 300,
@@ -892,12 +898,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
